@@ -164,6 +164,26 @@ Supported key names for the code field: `code`, `postal`, `id`, `name`.
 
 ---
 
+## Map Compatibility
+
+This resource is fully compatible with **colored-map**.
+
+The colored-map resource improves the GTA V map visuals by adding a colored and clearer map texture, which works perfectly alongside RT Map Locator when navigating using postal codes and GPS waypoints.
+
+> 📥 Download colored-map here: **https://github.com/jordantoulain/colored-map**
+
+### Recommended Setup
+
+For the best experience:
+
+1. Install **[colored-map](https://github.com/jordantoulain/colored-map)**.
+2. Install **RT Map Locator** (`rtmap`).
+3. Use the postal search to quickly navigate across the colored map.
+
+This combination provides a clean visual map with fast postal navigation, making it easier for players to locate destinations.
+
+---
+
 ## Dependencies (all optional)
 
 | Resource | Required for |
