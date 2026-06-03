@@ -1,4 +1,4 @@
-# RT Map Locator – Postal Search & GPS Waypoint System
+# PR Map Locator – Postal Search & GPS Waypoint System
 
 > Upgraded: Full **QBCore** & **OX** framework compatibility, configurable notifications, locale system, and clean config file.
 
@@ -15,14 +15,14 @@
 | Config file | All settings in `config.lua` — no need to touch Lua logic |
 | Keybind | Rebindable via GTA V settings (RegisterKeyMapping) |
 | Exports | `openSearch` · `locatePostal` · `removeBlip` |
-| Events | `rtmap:open` (net) · `rtmap:openLocal` (local) |
+| Events | `prmap:open` (net) · `prmap:openLocal` (local) |
 
 ---
 
 ## File Structure
 
 ```
-rtmap/
+prmap/
 ├── config.lua          ← all settings live here
 ├── client.lua          ← main script (framework-agnostic)
 ├── fxmanifest.lua      ← resource manifest
@@ -36,8 +36,8 @@ rtmap/
 
 ## Installation
 
-1. Drop the `rtmap` folder into your `resources/` directory.
-2. Add `ensure rtmap` to your `server.cfg`.
+1. Drop the `prmap` folder into your `resources/` directory.
+2. Add `ensure prmap` to your `server.cfg`.
 3. Open `config.lua` and adjust to your server's setup (see below).
 4. Restart the resource or reboot your server.
 
@@ -135,15 +135,15 @@ To add a new language, copy `locales/en.lua`, rename it (e.g. `locales/fr.lua`),
 
 ```lua
 -- Net event (server → client)
-TriggerClientEvent('rtmap:open', source)
+TriggerClientEvent('prmap:open', source)
 
 -- Local event (client → client)
-TriggerEvent('rtmap:openLocal')
+TriggerEvent('prmap:openLocal')
 
 -- Export (client script)
-exports['rtmap']:openSearch()
-exports['rtmap']:locatePostal(1000)   -- jump to postal 1000 directly
-exports['rtmap']:removeBlip()          -- clear the circle blip
+exports['prmap']:openSearch()
+exports['prmap']:locatePostal(1000)   -- jump to postal 1000 directly
+exports['prmap']:removeBlip()          -- clear the circle blip
 ```
 
 ---
@@ -168,7 +168,7 @@ Supported key names for the code field: `code`, `postal`, `id`, `name`.
 
 This resource is fully compatible with **colored-map**.
 
-The colored-map resource improves the GTA V map visuals by adding a colored and clearer map texture, which works perfectly alongside RT Map Locator when navigating using postal codes and GPS waypoints.
+The colored-map resource improves the GTA V map visuals by adding a colored and clearer map texture, which works perfectly alongside PR Map Locator when navigating using postal codes and GPS waypoints.
 
 > 📥 Download colored-map here: **https://github.com/jordantoulain/colored-map**
 
@@ -177,7 +177,7 @@ The colored-map resource improves the GTA V map visuals by adding a colored and 
 For the best experience:
 
 1. Install **[colored-map](https://github.com/jordantoulain/colored-map)**.
-2. Install **RT Map Locator** (`rtmap`).
+2. Install **PR Map Locator** (`prmap`).
 3. Use the postal search to quickly navigate across the colored map.
 
 This combination provides a clean visual map with fast postal navigation, making it easier for players to locate destinations.
